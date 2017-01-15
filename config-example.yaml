@@ -1,0 +1,9 @@
+---
+- ssid: 'WiFi AP'
+  url: 'http://10.0.0.1/login'
+  loginRequiredSelector: 'form[name=login]'
+  credentials:
+    'form[name=login] input[name=username]': 'username'
+    'form[name=login] input[name=password]': 'password'
+  submitSelector: 'form[name=login] input[type=submit]'
+  loginSuccessSelector: 'table'

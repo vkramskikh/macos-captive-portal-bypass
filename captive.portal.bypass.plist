@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" \
+ "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+  <dict>
+    <key>Label</key>
+    <string>captive.portal.bypass</string>
+
+    <key>ThrottleInterval</key>
+    <integer>1</integer>
+
+    <key>ProgramArguments</key>
+    <array>
+      <string>/usr/local/bin/node</string>
+      <string>/Users/SomeUser/captive-portal-bypass/index.js</string>
+    </array>
+
+    <key>WatchPaths</key>
+    <array>
+      <string>/etc/resolv.conf</string>
+      <string>/Library/Preferences/SystemConfiguration/com.apple.airport.preferences.plist</string>
+    </array>
+
+    <key>RunAtLoad</key>
+    <true/>
+</dict>
+</plist>
