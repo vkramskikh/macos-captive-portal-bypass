@@ -1,6 +1,7 @@
 ---
 - ssid: 'WiFi AP' # AP SSID
   url: 'http://10.0.0.1/login' # Captive portal URL
+  showBrowserWindow: true # Show browser window with the portal, useful for debugging
   loginRequiredSelector: 'form[name=login]' # (optional) Selector to check if login is required
   credentials: # object with all the fields to fill out
     'form[name=login] input[name=username]': 'username'

@@ -44,8 +44,8 @@ getWifiSSID().then((ssid) => {
           loadTimeout: 5000,
           waitTimeout: 5000,
           typeInterval: 10,
-          dock: true,
-          show: true
+          dock: ssidConfig.showBrowserWindow,
+          show: ssidConfig.showBrowserWindow
         });
         nightmare.goto(ssidConfig.url);
         if (ssidConfig.loginRequiredSelector) {
