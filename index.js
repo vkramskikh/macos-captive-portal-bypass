@@ -1,11 +1,8 @@
 const exec = require('child_process').exec;
 const request = require('request');
+const notify = require('osx-notifier');
 const yaml = require('js-yaml');
 const fs = require('fs');
-
-function notify(title = '', text = '') {
-  exec(`osascript -e 'display notification "${text}" with title "${title}"'`);
-}
 
 function getWifiSSID() {
   return new Promise((resolve, reject) => {
@@ -68,7 +65,11 @@ getWifiSSID().then((ssid) => {
         .then(killCaptiveNetworkAssistant)
         .then(() => nightmare.end())
         .catch((error) => {
-          notify('Captive portal bypass error', error);
+          notify({
+            type: 'fail',
+            title: 'Captive Portal Bypass Error',
+            message: String(error)
+          });
           console.error(error);
           nightmare.end();
         });
