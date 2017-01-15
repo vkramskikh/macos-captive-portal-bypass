@@ -1,9 +1,9 @@
 ---
-- ssid: 'WiFi AP'
-  url: 'http://10.0.0.1/login'
-  loginRequiredSelector: 'form[name=login]'
-  credentials:
+- ssid: 'WiFi AP' # AP SSID
+  url: 'http://10.0.0.1/login' # Captive portal URL
+  loginRequiredSelector: 'form[name=login]' # (optional) Selector to check if login is required
+  credentials: # object with all the fields to fill out
     'form[name=login] input[name=username]': 'username'
     'form[name=login] input[name=password]': 'password'
-  submitSelector: 'form[name=login] input[type=submit]'
-  loginSuccessSelector: 'table'
+  submitSelector: 'form[name=login] input[type=submit]' # selector of form submit button
+  loginSuccessSelector: 'table' # (optional) selector to check if login is successful
