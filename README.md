@@ -12,5 +12,7 @@ A tool for MacOS to automatically bypass captive portals.
 * Modify `config.yaml` according to the captive portal you want to bypass - provide correct URLs,
   form element selectors and credentials.
 * Run `node index.js` to make sure everything works fine.
+* Run `launchctl load ~/Library/LaunchAgents/captive.portal.bypass.plist` to start monitoring WiFi
+  state.
 
 Tested on MacOS Sierra.
